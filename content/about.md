@@ -9,4 +9,4 @@ I ask myself this daily. I'm just a curious cat with too much to learn and too l
 
 ## Contact Info
 
-If any of these topics interest you or you want to have a chat, send me an email at [sushi@fibered.cat](mailto:sushi@fibered.cat)! For aiko related inquiries, send your email to [estelle@aikocorp.ai](mailto:estelle@aikocorp.ai).
+If any of these topics interest you or you want to have a chat, send me an email at [sushi@fibered.cat](mailto:sushi@fibered.cat)! For aiko related inquiries, send me a dm on twitter!
