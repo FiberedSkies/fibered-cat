@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Terminal Blog</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+        :root {
+            --bg-color: #111111;
+            --text-color: #00ee00;
+            --link-color: #00aa00;
+            --header-color: #004400;
+            --border-color: #00ee00;
+        }
+
+        [data-theme="light"] {
+            --bg-color: #d0d0c0;
+            --text-color: #006600;
+            --link-color: #004400;
+            --header-color: #90907a;
+            --border-color: #006600;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'VT323', monospace;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            white-space: normal;
+            text-wrap: pretty;
+            overflow-wrap: break-word;
+            transition: background-color 0.3s, color 0.3s;
+            font-size: 1.1em;
+        }
+
+        .content-wrapper {
+            padding: 0 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+            white-space: normal;
+            text-wrap: pretty;
+            overflow-wrap: break-word;
+        }
+
+        .header-banner {
+            width: 100%;
+            height: 400px;
+            background: var(--header-color);
+            margin-bottom: 20px;
+            border: 2px solid var(--border-color);
+        }
+
+        .header-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        nav {
+            margin: 20px 0;
+            padding: 10px;
+            border: 2px solid var(--border-color);
+        }
+
+        .sushi-title {
+            font-weight: bold;
+            color: var(--text-color);
+            margin-right: 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        
+        .sushi-title .big-emoji {
+            font-size: 1.3em;
+            vertical-align: middle;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 1.2em;
+        }
+
+        nav a:hover {
+            color: var(--link-color);
+        }
+
+        .theme-toggle {
+            float: right;
+            background: var(--text-color);
+            color: var(--bg-color);
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-family: 'VT323', monospace;
+        }
+
+        .content {
+            padding: 15px;
+            border: 2px solid var(--border-color);
+            margin: 0;
+            margin-right: 20px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .content ol {
+            list-style-position: inside; /* Keeps numbers inside the box */
+            padding-left: 0;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .content ol li {
+            text-indent: -1em;
+            padding-left: 1em;
+            padding-right: 1em;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .blurb {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Terminal effects */
+        @keyframes terminal-flicker {
+            0% { opacity: 0.85; }
+            50% { opacity: 1; }
+            100% { opacity: 0.85; }
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.15),
+                rgba(0, 0, 0, 0.15) 1px,
+                transparent 1px,
+                transparent 2px
+            );
+            pointer-events: none;
+            animation: terminal-flicker 0.2s infinite;
+            z-index: 1000;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-color);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--text-color);
+            border: 1px solid var(--border-color);
+        }
+
+        /* Markdown specific styling */
+        .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+            color: var(--text-color);
+            margin: 0.5em 0 0.5em 0;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .content ul, .content ol {
+            margin-left: 2em;
+            margin-bottom: 1em;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .content p {
+            margin-bottom: 1em;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .content pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            max-width: 100%;
+        }
+
+        .content code {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            max-width: 100%;
+        }
+
+        .content strong {
+            color: var(--text-color);
+            font-weight: bold;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .error-message {
+            color: #ff0000;
+            padding: 20px;
+            border: 2px solid #ff0000;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-banner">
+        <img src="media/cat2.png" alt="Header Banner">
+    </div>
+
+    <div class="content-wrapper">
+        <nav>
+            <a href="#" class="sushi-title" data-page="home">
+                Sushi <span class="big-emoji">🍣</span>
+            </a>
+            <a href="#" data-page="home">root</a>
+            <a href="#" data-page="about">whoami</a>
+            <a href="#" data-page="resources">resources</a>
+            <a href="#" data-page="blurbs">blurbs</a>
+            <button class="theme-toggle" onclick="toggleTheme()">light/dark</button>
+        </nav>
+
+        <main class="content" id="main-content">
+            <!-- Content will be loaded here -->
+        </main>
+    </div>
+
+    <script>
+        // Function to safely get content from window.fs
+        async function safeReadFile(filename) {
+            const contentDiv = document.getElementById('main-content');
+            try {
+                const response = await fetch(filename);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return await response.text();
+            } catch (error) {
+                console.error('Full error details:', error);
+                contentDiv.innerHTML = `
+                    <div class="error-message">
+                        <h2>Error Loading Content</h2>
+                        <p>The requested content could not be loaded. Please try again later.</p>
+                        <p>Details: ${error.message}</p>
+                    </div>`;
+                throw new Error(`Failed to fetch ${filename}`);
+            }
+        }
+
+
+        // Function to load and render markdown content
+        async function loadMarkdownContent(pageName) {
+            const contentDiv = document.getElementById('main-content');
+            
+            try {
+                let markdownContent;
+                
+                if (pageName === 'blurbs') {
+                    // Handle blurbs directory
+                    try {
+                        markdownContent = await safeReadFile('blurbs/index.md');
+                    } catch (error) {
+                        // If index.md doesn't exist, we could list blurbs here
+                        markdownContent = '# Blurbs\n\nBlurb content will be listed here.';
+                    }
+                } else {
+                    // Load regular pages
+                    markdownContent = await safeReadFile(`content/${pageName}.md`);
+                }
+                
+                // Render the markdown content
+                contentDiv.innerHTML = marked.parse(markdownContent);
+                
+            } catch (error) {
+                contentDiv.innerHTML = `
+                    <div class="error-message">
+                        <h2>Error Loading Content</h2>
+                        <p>The requested content could not be loaded. Please try again later.</p>
+                        <p>Details: ${error.message}</p>
+                    </div>`;
+            }
+        }
+
+        // Event listeners for navigation
+        document.querySelectorAll('nav a[data-page]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const page = e.target.closest('a').dataset.page;
+                loadMarkdownContent(page);
+            });
+        });
+
+        // Theme toggle function
+        function toggleTheme() {
+            const body = document.body;
+            if (body.getAttribute('data-theme') === 'light') {
+                body.removeAttribute('data-theme');
+            } else {
+                body.setAttribute('data-theme', 'light');
+            }
+        }
+
+        // Load home page by default
+        document.addEventListener('DOMContentLoaded', () => {
+            loadMarkdownContent('home');
+        });
+    </script>
+</body>
+</html>
