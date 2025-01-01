@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retro Terminal Blog</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.1/feather.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
         :root {
             --bg-color: #111111;
             --text-color: #00ee00;
-            --link-color: #00aa00;
+            --link-color: #4362c9;
             --header-color: #004400;
             --border-color: #00ee00;
         }
@@ -19,7 +20,7 @@
         [data-theme="light"] {
             --bg-color: #d0d0c0;
             --text-color: #006600;
-            --link-color: #004400;
+            --link-color: #4362c9;
             --header-color: #90907a;
             --border-color: #006600;
         }
@@ -41,7 +42,7 @@
             text-wrap: pretty;
             overflow-wrap: break-word;
             transition: background-color 0.3s, color 0.3s;
-            font-size: 1.1em;
+            font-size: 1.4em;
         }
 
         .content-wrapper {
@@ -107,6 +108,41 @@
             font-family: 'VT323', monospace;
         }
 
+        /* Updated social links styles to match content box */
+        .social-links {
+            display: flex;
+            gap: 20px;
+            padding: 15px;
+            margin: 20px 0;
+            border: 2px solid var(--border-color);
+            margin-right: 20px; /* Match content box margin */
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 5px 10px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--link-color);
+        }
+
+        .social-links svg {
+            width: 24px;
+            height: 24px;
+            stroke: currentColor;
+            color: var(--text-color);
+        }
+        .social-links svg:hover {
+            color: var(--link-color);
+        }
+
         .content {
             padding: 15px;
             border: 2px solid var(--border-color);
@@ -117,13 +153,15 @@
         }
 
         .content ol {
-            list-style-position: inside; /* Keeps numbers inside the box */
+            list-style-position: inside;
             padding-left: 0;
+            margin-left: 2em;
+            margin-bottom: 1em;
             word-wrap: break-word;
             overflow-wrap: break-word;
         }
 
-        .content ol li {
+        .content li {
             text-indent: -1em;
             padding-left: 1em;
             padding-right: 1em;
@@ -137,7 +175,6 @@
             border: 1px solid var(--border-color);
         }
 
-        /* Terminal effects */
         @keyframes terminal-flicker {
             0% { opacity: 0.85; }
             50% { opacity: 1; }
@@ -163,7 +200,6 @@
             z-index: 1000;
         }
 
-        /* Custom scrollbar */
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -177,7 +213,6 @@
             border: 1px solid var(--border-color);
         }
 
-        /* Markdown specific styling */
         .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
             color: var(--text-color);
             margin: 0.5em 0 0.5em 0;
@@ -185,9 +220,16 @@
             overflow-wrap: break-word;
         }
 
-        .content ul, .content ol {
+        .content ul{
             margin-left: 2em;
             margin-bottom: 1em;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .content a {
+            color: var(--link-color);
+            text-decoration: none;
             word-wrap: break-word;
             overflow-wrap: break-word;
         }
@@ -231,11 +273,10 @@
     <div class="header-banner">
         <img src="media/cat2.png" alt="Header Banner">
     </div>
-
     <div class="content-wrapper">
         <nav>
             <a href="#" class="sushi-title" data-page="home">
-                Sushi <span class="big-emoji">🍣</span>
+                sushi <span class="big-emoji">🍣</span>
             </a>
             <a href="#" data-page="home">root</a>
             <a href="#" data-page="about">whoami</a>
@@ -247,10 +288,25 @@
         <main class="content" id="main-content">
             <!-- Content will be loaded here -->
         </main>
+
+        <div class="social-links">
+            <a href="https://github.com/FiberedSkies" target="_blank" rel="noopener noreferrer">
+                <i data-feather="github"></i>
+                <span> </span>
+            </a>
+            <a href="https://x.com/FiberedSkies" target="_blank" rel="noopener noreferrer">
+                <i data-feather="twitter"></i>
+                <span> </span>
+            </a>
+        </div>
     </div>
 
     <script>
-        // Function to safely get content from window.fs
+        // Initialize Feather Icons
+        document.addEventListener('DOMContentLoaded', () => {
+            feather.replace();
+        });
+
         async function safeReadFile(filename) {
             const contentDiv = document.getElementById('main-content');
             try {
@@ -271,7 +327,6 @@
             }
         }
 
-
         // Function to load and render markdown content
         async function loadMarkdownContent(pageName) {
             const contentDiv = document.getElementById('main-content');
@@ -280,20 +335,25 @@
                 let markdownContent;
                 
                 if (pageName === 'blurbs') {
-                    // Handle blurbs directory
                     try {
                         markdownContent = await safeReadFile('blurbs/index.md');
                     } catch (error) {
-                        // If index.md doesn't exist, we could list blurbs here
                         markdownContent = '# Blurbs\n\nBlurb content will be listed here.';
                     }
                 } else {
-                    // Load regular pages
                     markdownContent = await safeReadFile(`content/${pageName}.md`);
                 }
-                
-                // Render the markdown content
+
                 contentDiv.innerHTML = marked.parse(markdownContent);
+                
+                // Add event listeners to any links with data-page attributes
+                contentDiv.querySelectorAll('a[data-page]').forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const page = e.target.closest('a').dataset.page;
+                        loadMarkdownContent(page);
+                    });
+                });
                 
             } catch (error) {
                 contentDiv.innerHTML = `
@@ -305,7 +365,6 @@
             }
         }
 
-        // Event listeners for navigation
         document.querySelectorAll('nav a[data-page]').forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -314,7 +373,6 @@
             });
         });
 
-        // Theme toggle function
         function toggleTheme() {
             const body = document.body;
             if (body.getAttribute('data-theme') === 'light') {
@@ -324,7 +382,6 @@
             }
         }
 
-        // Load home page by default
         document.addEventListener('DOMContentLoaded', () => {
             loadMarkdownContent('home');
         });
