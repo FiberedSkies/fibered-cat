@@ -7,7 +7,7 @@ This is where I'll post any links to resources I find really good or interesting
  - [Partial Advantage Estimator For Proximal Policy Optimization](https://arxiv.org/abs/2301.10920)
  - [Grobner Bases: A Computaional Approach to Commutative Algebra](https://link.springer.com/book/10.1007/978-1-4612-0913-3)
 
-The following are a not very comprehensive list of 
+---
 
 ## Machine Learning
 
