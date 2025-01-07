@@ -19,7 +19,6 @@ If you're just starting out with RL, I'd recommend checking out this textbook: [
 For deep RL methods:
 
  - [Compatible Gradient Approximations for Actor-Critic Algorithms](https://arxiv.org/abs/2409.01477)
-
  - [The Definitive Guide to Policy Gradients in Deep Reinforcement Learning](https://arxiv.org/abs/2401.13662)
  - [An Invitation to Deep Reinforcement Learning](https://arxiv.org/abs/2312.08365)
 
@@ -61,23 +60,19 @@ I've been really curious about the balance between model efficiency, convergence
 This is a bit of a broad category, but basically everything in here relates to models informed of, or defined around, concepts from AT or AG.
 
  - [Topos and Stacks of Deep Neural Networks](https://arxiv.org/abs/2106.14587)
+ - [ReLU Neural Networks, Polyhedral Decompositions, and Persistent Homology](https://arxiv.org/abs/2306.17418)
  - [Neural Sheaf Diffusion: A Topological Perspective on Heterophily and Oversmoothing in GNNs](https://arxiv.org/abs/2202.04579)
  - [Simplicial Attention Networks](https://arxiv.org/abs/2204.09455)
  - [Sheaf Neural Networks with Connection Laplacians](https://proceedings.mlr.press/v196/barbero22a/barbero22a.pdf)
  - [Topological Deep Learning: Classification Neural Networks](https://arxiv.org/abs/2102.08354)
 
-##### Transformers, Expressiveness, and Scalability
-
-Language models are definitely not my strong suit, but I
+##### Language Models and Scaling
 
  - [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](https://arxiv.org/abs/1701.06538)
  - [Hyena Hierarchy: Towards Larger Convolutional Language Models](https://arxiv.org/abs/2302.10866)
  - [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](https://arxiv.org/abs/2205.14135)
  - [Fast Transformer Decoding: One Write-Head is All You Need](https://arxiv.org/abs/1911.02150)
  - [RoFormer: Enhanced Transformer with Rotary Position Embedding](https://arxiv.org/abs/2104.09864)
-
-##### Misc
-
  - [Model Agnostic Meta-Learning for Fast Adaptation of Deep Networks](https://arxiv.org/abs/1703.03400)
 
 ## Adversarial Systems
