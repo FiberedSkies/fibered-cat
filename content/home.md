@@ -6,5 +6,5 @@ My name is sushi! I build simulations and RL-based automata. Welcome to my porta
 Some open source stuff I've contributed to includes:
 
 - [aika](https://github.com/FiberedSkies/aika): Extremely fast and flexible agent-based parallel simulator, built in Rust.
-- [arbiter](https://github.com/anthias-labs/arbiter): Ethereum sandbox simulator with EVM parity, built in Rust.
+- [arbiter](https://github.com/anthias-labs/arbiter): Agent-based Ethereum sandbox, built in Rust.
 - [type_sheaf](https://github.com/Autoparallel/type_sheaf): Sheaves of arbitrary types, built in Rust. WIP
