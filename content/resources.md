@@ -18,7 +18,6 @@ I really really love the classic simulator papers from the 70s through late 90s,
  - [Asynchronous Distributed Simulation via a Sequence of Parallel Computations](https://dl.acm.org/doi/pdf/10.1145/358598.358613)
  - [Parallel Discrete Event Simulations](https://dl.acm.org/doi/pdf/10.1145/84537.84545)
  - [HERCULES: A System for High Level Synthesis](https://si2.epfl.ch/demichel/publications/archive/1988/DAC88pg483.pdf)
-
  - [Time Warp Simulation on Multi-Core Platforms](https://www.informs-sim.org/wsc19papers/150.pdf)
  - [A Study of Time Warp Rollback Mechanisms](https://dl.acm.org/doi/pdf/10.1145/102810.102813)
  - [An evaluation of the Chandy-Misra-Bryant algorithm for digital logic simulation](https://dl.acm.org/doi/pdf/10.1145/130611.130613)
