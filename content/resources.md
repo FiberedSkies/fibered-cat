@@ -9,7 +9,7 @@ This is where I'll post any links to resources I find really good or interesting
 
 ---
 
-## Simulators & Automata
+## Simulators
 
 I really really love the classic simulator papers from the 70s through late 90s, they still are extremely relevant imho today. It honestly feels like they had all the right directions wand ideas but nowhere near enough compute to explore it properly like now, so there's a lot to be taken and built upon still from then. Some of my favorites are:
 
@@ -100,7 +100,7 @@ I'm not very strong with LLMs but I try to keep up with the liturature
 
 ## Computational & Applied Math
 
-TODO! I have far too many applied math resources to index right now, so will get back to this slowly this week.
+TODO! I have far too many applied math resources to index right now, so will get back to this slowly this week. Latest textbooks I've been working on though are:
 
  - [Using Algebraic Geometry](https://eclass.uoa.gr/modules/document/file.php/D231/Papers/Cox-UsingAlgebraicGeometry.pdf)
  - [Artin's deformation theory notes](https://www.maths.ed.ac.uk/~ssierra/artin_notes_deformationthy.pdf)
