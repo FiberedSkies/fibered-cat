@@ -5,6 +5,6 @@ My name is sushi! I'm an HPC engineer and a hobbyist geometer. Welcome to my por
 
 Some open source stuff I've contributed to includes:
 
-- [aika](https://github.com/FiberedSkies/aika): Extremely fast agent-based simulator framework, built in Rust.
+- [kala](https://github.com/FiberedSkies/kala): Extremely fast agent-based simulator framework, built in Rust.
 - [arbiter](https://github.com/anthias-labs/arbiter): Agent-based Ethereum sandbox, built in Rust.
 - [type_sheaf](https://github.com/Autoparallel/type_sheaf): Sheaves of arbitrary types, built in Rust. WIP
