@@ -1,36 +1,24 @@
-# resources
-This is where I'll post any links to resources I find really good or interesting! ❤️
-
-#### What am I reading right now?
-
- - [ROSS: A High-Performance, Low Memory, Modular Time Warp System](https://dl.acm.org/doi/pdf/10.5555/336146.336157)
- - [The Local Time Warp Approach](https://dl.acm.org/doi/pdf/10.1145/174134.158474)
- - [Grobner Bases: A Computaional Approach to Commutative Algebra](https://link.springer.com/book/10.1007/978-1-4612-0913-3)
-
----
+# resource dump
+This is where I'll post any links to resources I find really good, useful, or interesting! <3
 
 ## Simulators
 
-I really really love the classic simulator papers from the 70s through late 90s, they still are extremely relevant imho today. It honestly feels like they had all the right directions wand ideas but nowhere near enough compute to explore it properly like now, so there's a lot to be taken and built upon still from then. Some of my favorites are:
+I really really love the classic simulator papers from the 70s through late 90s, they still are extremely relevant today imho. It honestly feels like they had all the right directions wand ideas but nowhere near enough compute to explore it properly like now, so there's a lot to be taken and built upon still from then.
 
- - [Hashed and Hierarchical Timing Wheels: Data Structuresfor the Efficient Implementation of a Timer Facility](https://dl.acm.org/doi/pdf/10.1145/37499.37504)
+ - [Hashed and Hierarchical Timing Wheels: Data Structures for the Efficient Implementation of a Timer Facility](https://dl.acm.org/doi/pdf/10.1145/37499.37504)
  - [Virtual Time](https://dl.acm.org/doi/pdf/10.1145/3916.3988)
  - [Asynchronous Distributed Simulation via a Sequence of Parallel Computations](https://dl.acm.org/doi/pdf/10.1145/358598.358613)
  - [Parallel Discrete Event Simulations](https://dl.acm.org/doi/pdf/10.1145/84537.84545)
- - [HERCULES: A System for High Level Synthesis](https://si2.epfl.ch/demichel/publications/archive/1988/DAC88pg483.pdf)
- - [Time Warp Simulation on Multi-Core Platforms](https://www.informs-sim.org/wsc19papers/150.pdf)
  - [A Study of Time Warp Rollback Mechanisms](https://dl.acm.org/doi/pdf/10.1145/102810.102813)
  - [An evaluation of the Chandy-Misra-Bryant algorithm for digital logic simulation](https://dl.acm.org/doi/pdf/10.1145/130611.130613)
 
-There's likely a ton more recent work, but I'm still working through the classics I supposed. Lots to try out on new hardware.
-
 ## Machine Learning
 
-Most of what I focus on in ML theory is either reinforcement learning, model efficiency, or geometric learning. Mainly curious about how I can make smarter and more capable automated systems using ML, and how algebraic methods can be used to improve different models.
+Most of what I focus on in ML theory is either reinforcement learning, model efficiency, or topological learning. Mainly curious about how I can make smarter and more capable automated systems using DRL and reasoning, along how algebraic methods can be used to improve these models.
 
 ##### Reinforcement Learning
 
-If you're just starting out with RL, I'd recommend checking out this textbook: [Reinforcement Learning: An Introduction](https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf).
+If you're just starting out with RL, I'd recommend checking out this textbook: [Reinforcement Learning: An Introduction](https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf). The following links are just papers I have found useful in my work so far. 
 
 For deep RL methods:
 
@@ -40,28 +28,18 @@ For deep RL methods:
 
 For partially observed and sparse reward enviroments:
 
- - [SOAP-RL: Sequential Option Advantage Propagation for Reinforcement Learning in POMDP Environments](https://arxiv.org/abs/2407.18913)
  - [Beyond Optimism: Exploration With Partially Observable Rewards](https://arxiv.org/abs/2406.13909)
  - [Reinforcement Learning with Sparse Rewards using Guidance from Offline Demonstration](https://arxiv.org/abs/2202.04628)
  - [When is Partially Observable Reinforcement Learning Not Scary?](https://arxiv.org/abs/2204.08967)
- - [Planning and acting in partially observable stochastic domains](https://people.csail.mit.edu/lpk/papers/aij98-pomdp.pdf)
 
 For on-policy approximate methods:
 
  - [DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models](https://arxiv.org/abs/2402.03300)
  - [KTO: Model Alignment as Prospect Theoretic Optimization](https://arxiv.org/abs/2402.01306)
- - [Reward Model Learning vs. Direct Policy Optimization: A Comparative Analysis of Learning from Human Preferences](https://arxiv.org/abs/2403.01857)
  - [Direct Preference Optimization: Your Language Model is Secretly a Reward Model](https://arxiv.org/abs/2305.18290)
  - [Partial Advantage Estimator For Proximal Policy Optimization](https://arxiv.org/abs/2301.10920)
  - [Proximal Policy Optimization Algorithms](https://arxiv.org/abs/1707.06347)
  - [Trust Region Policy Optimization](https://arxiv.org/abs/1502.05477)
-
-For off-policy approximate methods:
-
- - [Vlearn: Off-Policy Learning with Efficient State-Value Function Estimation](https://arxiv.org/html/2403.04453v2)
- - [V-trace](https://paperswithcode.com/method/v-trace)
- - [Skill or Luck? Return Decomposition via Advantage Functions](https://arxiv.org/abs/2402.12874)
- - [Direct Advantage Estimation](https://arxiv.org/abs/2109.06093)
 
 ##### Symmetries and Model Efficiency
 
@@ -76,9 +54,7 @@ I've been really curious about the balance between model efficiency, convergence
  - [Rigging the Lottery: Making All Tickets Winners](https://arxiv.org/abs/1911.11134)
  - [The Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks](https://arxiv.org/pdf/1803.03635)
 
-##### Geometric Learning
-
-This is a bit broad, but basically everything in here relates to models informed of, or defined around, concepts from AT or AG.
+##### Topological Learning
 
  - [Topos and Stacks of Deep Neural Networks](https://arxiv.org/abs/2106.14587)
  - [ReLU Neural Networks, Polyhedral Decompositions, and Persistent Homology](https://arxiv.org/abs/2306.17418)
@@ -87,20 +63,34 @@ This is a bit broad, but basically everything in here relates to models informed
  - [Sheaf Neural Networks with Connection Laplacians](https://proceedings.mlr.press/v196/barbero22a/barbero22a.pdf)
  - [Topological Deep Learning: Classification Neural Networks](https://arxiv.org/abs/2102.08354)
 
-##### Language Models and Scaling
-
-I'm not very strong with LLMs but I try to keep up with the liturature
-
- - [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](https://arxiv.org/abs/1701.06538)
- - [Hyena Hierarchy: Towards Larger Convolutional Language Models](https://arxiv.org/abs/2302.10866)
- - [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](https://arxiv.org/abs/2205.14135)
- - [Fast Transformer Decoding: One Write-Head is All You Need](https://arxiv.org/abs/1911.02150)
- - [RoFormer: Enhanced Transformer with Rotary Position Embedding](https://arxiv.org/abs/2104.09864)
- - [Model Agnostic Meta-Learning for Fast Adaptation of Deep Networks](https://arxiv.org/abs/1703.03400)
 
 ## Computational & Applied Math
 
-TODO! I have far too many applied math resources to index right now, so will get back to this slowly this week. Latest textbooks I've been working on though are:
+In applied math, my interest the past year has been exclusively on emergence and stability in complex systems, and have particularly been taking an approach through geometry. These are some of the resources I've either used or encountered in this exploration.
 
- - [Using Algebraic Geometry](https://eclass.uoa.gr/modules/document/file.php/D231/Papers/Cox-UsingAlgebraicGeometry.pdf)
- - [Artin's deformation theory notes](https://www.maths.ed.ac.uk/~ssierra/artin_notes_deformationthy.pdf)
+##### Papers
+
+Some of the foundational works:
+
+ - [Sheaves, Cosheaves and Applications](https://arxiv.org/abs/1303.3255)
+ - [Towards A Spectral Theory of Cellular Sheaves](https://arxiv.org/abs/1808.01513)
+ - [Cellular Sheaves of Lattices and the Tarski Laplacian](https://arxiv.org/abs/2007.04099)
+ - [Higher-order Laplacian Renormalization](https://arxiv.org/abs/2401.11298)
+ - [Persistence by Parts: Multiscale Feature Detection via Distributed Persistent Homology](https://arxiv.org/abs/2001.01623)
+ - [Connecting the geometry and dynamics of many-body complex systems with message passing neural operators](https://www.arxiv.org/abs/2502.15913)
+
+Note that these also give major context for all the sheaf neural network papers listed earlier as all of them are built off cellular sheaves over graphs. Now for some papers on applications of all this:
+
+ - [A Sheaf-Theoretic Characterization of Tasks in Distributed Systems](https://arxiv.org/abs/2503.02556)
+ - [Opinion Dynamics on Discourse Sheaves](https://arxiv.org/abs/2005.12798)
+ - [SIGMA: Sheaf-Informed Geometric Multi-Agent Pathfinding](https://arxiv.org/abs/2502.06440)
+
+##### Books
+
+My fav books right now:
+
+ - [Topological Signal Processing](https://link.springer.com/book/10.1007/978-3-642-36104-3)
+ - [Grobner Bases: A Computational Approach to Commutative Algebra](https://link.springer.com/book/10.1007/978-1-4612-0913-3)
+ - [Using Algebraic Geometry](https://link.springer.com/book/10.1007/b138611)
+ - [Categories and Sheaves](https://link.springer.com/book/10.1007/3-540-27950-4)
+ - [Sheaves in Geometry and Logic: An Introduction to Topos Theory](https://link.springer.com/book/10.1007/978-1-4612-0927-0)
