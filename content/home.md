@@ -22,7 +22,7 @@ Some open source stuff I've contributed to includes:
 
 ##### [Riley](https://jtriley.com/)
 
-Probably the best engineer I've ever met, has inspired and taught me so much. If you have a high performance that's already doing great, chances are they still know how to optimize it further. Best person to just talk to for hours about everything from systems design to social dynamics and emergence. 
+Probably the best engineer I've ever met, has inspired and taught me so much. If you have a high performance system that's already doing great, chances are they still know how to optimize it further. Best person to just talk to for hours about everything from systems design to social dynamics and emergence. 
 
 ##### [Colin](https://autoparallel.xyz/)
 
