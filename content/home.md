@@ -7,7 +7,7 @@ In my free time, I research emergence and stability in complex systems.
 
 I do systems programming in Rust and C/C++. I particularly enjoy working on high performance systems, simulators, and ML-based adaptive systems.
 
-I believe in radical open source, open access to knowledge and technology, and symbiotic collaboration. I strongly oppose corporate colonialism, and see a unique power in federated research collectives who boast these values, in keeping techocapital power structures in check. I see knowledge enclosure as a form of parasitism on public intellectual labor.
+I believe in radical open source, open access to knowledge and technology, and symbiotic collaboration. I strongly oppose corporatism, and see a unique power in federated research collectives who boast these values, in keeping techocapital power structures in check. I see knowledge enclosure as a form of parasitism on public intellectual labor.
 
 ---
 
