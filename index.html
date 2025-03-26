@@ -44,16 +44,16 @@
         }
 
         .content-wrapper {
-            padding: 0 10px;
-            max-width: 1200px;
-            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 24px;
         }
 
         .header-banner {
             width: 100%;
             height: 400px;
             background: var(--header-color);
-            margin-bottom: 20px;
             border: 2px solid var(--border-color);
         }
 
@@ -64,9 +64,11 @@
         }
 
         nav {
-            margin: 20px 0;
             padding: 10px;
             border: 2px solid var(--border-color);
+            margin-top: 24px;
+            width: 100%;
+            max-width: 100rem;
         }
 
         .sushi-title {
@@ -103,23 +105,21 @@
 
         /* Updated social links styles to match content box */
         .social-links {
+            margin-top: 24px;
+            width: 100%;
+            max-width: 100rem;
             display: flex;
-            gap: 20px;
+            gap: 15px;
+            align-items: center;
             padding: 15px;
-            margin: 20px 0;
             border: 2px solid var(--border-color);
-            margin-right: 20px; /* Match content box margin */
         }
 
         .social-links a {
-            display: flex;
-            align-items: center;
-            gap: 8px;
             color: var(--text-color);
             text-decoration: none;
-            font-size: 1.1em;
-            padding: 5px 10px;
             transition: color 0.3s;
+            height: 24px;
         }
 
         .social-links a:hover {
@@ -182,10 +182,11 @@
         }
 
         .content {
+            margin-top: 24px;
+            width: 100%;
+            max-width: 100rem;
             padding: 15px;
             border: 2px solid var(--border-color);
-            margin: 0;
-            margin-right: 20px;
             word-wrap: break-word;
             overflow-wrap: break-word;
         }
@@ -224,12 +225,10 @@
 
         .content pre {
             white-space: pre-wrap;
-            max-width: 100%;
         }
 
         .content code {
             white-space: pre-wrap;
-            max-width: 100%;
         }
 
         .content strong {
