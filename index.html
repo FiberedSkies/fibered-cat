@@ -36,29 +36,24 @@
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
-            margin: 0;
-            padding: 0;
             white-space: normal;
             text-wrap: pretty;
             overflow-wrap: break-word;
             transition: background-color 0.3s, color 0.3s;
-            font-size: 1.4em;
+            font-size: 1.4rem;
         }
 
         .content-wrapper {
-            padding: 0 10px;
-            max-width: 1200px;
-            margin: 0 auto;
-            white-space: normal;
-            text-wrap: pretty;
-            overflow-wrap: break-word;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 1.5rem;
         }
 
         .header-banner {
             width: 100%;
             height: 400px;
             background: var(--header-color);
-            margin-bottom: 20px;
             border: 2px solid var(--border-color);
         }
 
@@ -69,29 +64,29 @@
         }
 
         nav {
-            margin: 20px 0;
-            padding: 10px;
+            padding: 0.6rem;
             border: 2px solid var(--border-color);
+            margin-top: 1.5rem;
+            width: 100%;
+            max-width: 100rem;
         }
 
         .sushi-title {
             font-weight: bold;
             color: var(--text-color);
-            margin-right: 20px;
-            text-decoration: none;
-            font-size: 1.2em;
+            font-size: 1.6rem;
         }
-        
+
         .sushi-title .big-emoji {
-            font-size: 1.3em;
+            font-size: 2rem;
             vertical-align: middle;
         }
 
         nav a {
             color: var(--text-color);
             text-decoration: none;
-            margin-right: 20px;
-            font-size: 1.2em;
+            margin-right: 1.5rem;
+            font-size: 1.6rem;
         }
 
         nav a:hover {
@@ -103,30 +98,28 @@
             background: var(--text-color);
             color: var(--bg-color);
             border: none;
-            padding: 5px 10px;
+            padding: 0.4rem 0.8rem;
             cursor: pointer;
             font-family: 'VT323', monospace;
         }
 
         /* Updated social links styles to match content box */
         .social-links {
+            margin-top: 1.5rem;
+            width: 100%;
+            max-width: 100rem;
             display: flex;
-            gap: 20px;
-            padding: 15px;
-            margin: 20px 0;
+            gap: 1.5rem;
+            align-items: center;
+            padding: 1rem;
             border: 2px solid var(--border-color);
-            margin-right: 20px; /* Match content box margin */
         }
 
         .social-links a {
-            display: flex;
-            align-items: center;
-            gap: 8px;
             color: var(--text-color);
             text-decoration: none;
-            font-size: 1.1em;
-            padding: 5px 10px;
             transition: color 0.3s;
+            height: 1.5rem;
         }
 
         .social-links a:hover {
@@ -134,44 +127,19 @@
         }
 
         .social-links svg {
-            width: 24px;
-            height: 24px;
+            width: 1.5rem;
+            height: 1.5rem;
             stroke: currentColor;
             color: var(--text-color);
         }
+
         .social-links svg:hover {
             color: var(--link-color);
         }
 
-        .content {
-            padding: 15px;
-            border: 2px solid var(--border-color);
-            margin: 0;
-            margin-right: 20px;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-        }
-
-        .content ol {
-            list-style-position: inside;
-            padding-left: 0;
-            margin-left: 2em;
-            margin-bottom: 1em;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-        }
-
-        .content li {
-            text-indent: -1em;
-            padding-left: 1em;
-            padding-right: 1em;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-        }
-
         .blurb {
             margin-bottom: 30px;
-            padding: 15px;
+            padding: 1rem;
             border: 1px solid var(--border-color);
         }
 
@@ -213,59 +181,65 @@
             border: 1px solid var(--border-color);
         }
 
-        .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
-            color: var(--text-color);
-            margin: 0.5em 0 0.5em 0;
+        .content {
+            margin-top: 1.5rem;
+            width: 100%;
+            max-width: 100rem;
+            padding: 1rem;
+            border: 2px solid var(--border-color);
             word-wrap: break-word;
             overflow-wrap: break-word;
         }
 
-        .content ul{
+        .content ol {
+            list-style-position: inside;
+            padding-left: 0;
             margin-left: 2em;
             margin-bottom: 1em;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
+        }
+
+        .content li {
+            text-indent: -1em;
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+
+        .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+            color: var(--text-color);
+            margin: 0.5em 0 0.5em 0;
+        }
+
+        .content ul{
+            margin-left: 2.5rem;
+            margin-bottom: 1.5rem;
         }
 
         .content a {
             color: var(--link-color);
             text-decoration: none;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
         }
 
         .content p {
-            margin-bottom: 1em;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
+            margin-bottom: 1rem;
         }
 
         .content pre {
             white-space: pre-wrap;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            max-width: 100%;
         }
 
         .content code {
             white-space: pre-wrap;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            max-width: 100%;
         }
 
         .content strong {
             color: var(--text-color);
             font-weight: bold;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
         }
 
         .error-message {
             color: #ff0000;
-            padding: 20px;
+            padding: 1.5rem;
             border: 2px solid #ff0000;
-            margin: 20px 0;
         }
     </style>
 </head>
@@ -275,6 +249,7 @@
     </div>
     <div class="content-wrapper">
         <nav>
+            <button class="theme-toggle" onclick="toggleTheme()">light/dark</button>
             <a href="#" class="sushi-title" data-page="home">
                 sushi <span class="big-emoji">🍣</span>
             </a>
@@ -282,7 +257,6 @@
             <a href="#" data-page="about">whoami</a>
             <a href="#" data-page="resource dump">resources</a>
             <a href="#" data-page="blurbs">blurbs</a>
-            <button class="theme-toggle" onclick="toggleTheme()">light/dark</button>
         </nav>
 
         <main class="content" id="main-content">
