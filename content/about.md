@@ -1,10 +1,29 @@
 # whoami
-I ask myself this daily. I'm just a curious cat with too much to learn and too little time in a day! Professionally, I've been an automation R&D engineer focusing on self-adaptive systems for 3 years now. Previously worked on researching trustless automation in derivative markets on Ethereum, and I recently just finished my internship with [AIKOCorp](https://aikocorp.ai/) building tools for automated malware evasion! I also like to blurb sometimes about computational geometry, simulators, high performance systems, and ML. I probably have way too many curiosities to list, but the following take up most of my free mindshare:
+I ask myself this a lot. 
 
- 1. **Simulators & HPC**: Simulators to me are one of the coolest, most forgotten-about peices of tech we have and use constantly today. Asidde from their potential use in game engines, research settings, and even niche things like RL arenas, they also are just very pure high performance systems. This is somewhat why I've started [kala](https://github.com/FiberedSkies/kala), to explore different synchronization schemes, data structures, and scheduling/processing/messaging algorithms in an attempt at an extremely high throughput simulator for regular hardware. 
- 1. **Applied Algebraic Geometry**: Particularly interested in applications of deformation theory and Artin stacks in network theory. I got interested in this after seeing the work [NASA](https://ntrs.nasa.gov/api/citations/20220002277/downloads/AeroConf_2022___Sheaves_for_Routing_in_DTN%20--%202022-02-25.pdf) has done on the application of sheaves in network modelling, and exploring how [sheaf neural networks](https://arxiv.org/abs/2012.06333) are used to extend GCNs. Now, I'm more curious if one play off the success sheaves have found in these measurement applications by using Artin stacks to understand better how these measurements change as the underlying system deforms.
- 2. **Multi-Scale Modeling**: I stumbled on Gwilliam's work using [factorization algebras](https://arxiv.org/abs/2310.06137) and deformation theory in EFT and it made me really curious about renormalization more broadly. Particularly curious in answering the question of renormalizability in complex systems outside of physics. I've been playing with sequences of Artin stacks for this since it seems to allow us to both frame the progressive filtrations and explore deformations over a space in a similar way to renormalization in EFT. 
- 4. **Exploit Development**: I really like to build malware on windows systems, specifically enjoy finding kernel-level privilege escalations. I also research/build RL-based malware evasion tools on windows, in an attempt to automate the bypass process on protected endpoints. I want to branch more into learning appsec as well at some point, however know much less about working in that area.
+## Personal Bio
+
+I'm an ex-competitive distance runner, though stopped after breaking my ankle a while back. I still love running now, just am not nearly as fast anymore. I crochet a lot, I like making tops and bucket hats. I also bake a ton of desserts (particularly cookies and pies), read a lot of novels, and love RnB. 
+
+Lately have been reading Kurt Vonegut's books! Just finished Cat's Cradle, now reading Slaughterhouse 5.
+
+## Professional Info
+
+Academically, I studied applied math and physics at the University of Waterloo, got a BSc. I've been an autonomous systems R&D engineer for 3 years professionally, lately learning to use RL + LLMs in automated evasion agents, multi-objective pathfinders, and companion agents. My previous position was an ML research internship with AIKOCorp, exploring autonomous EDR evasion agents. Prior to this, I worked on autonomous portfolio replication research for roughly two years. 
+
+I do short-term and/or project-based solo contracts from time to time, so feel free to reach out if you have anything for me!
+
+## Tech Interests
+
+I have way too many to list but here's the list of stuff you'll see me ranting about:
+
+ - **Simulation Design**
+ - **Autonomous Systems & Agents**
+ - **Unsupervised Learning**
+ - **Evasion Developement**
+ - **Applied Categories and Topoi**
+
+I have nothing up currently, but will be posting little insights about these topics I find worth sharing under **Blurbs**. I eventually also want to do long forms but we'll start somewhere I suppose.
 
 ## contact info
 

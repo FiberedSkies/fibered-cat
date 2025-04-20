@@ -250,13 +250,12 @@
     <div class="content-wrapper">
         <nav>
             <button class="theme-toggle" onclick="toggleTheme()">light/dark</button>
-            <a href="#" class="sushi-title" data-page="home">
+            <a class="sushi-title" href="?page=home">
                 sushi <span class="big-emoji">🍣</span>
             </a>
-            <a href="#" data-page="home">root</a>
-            <a href="#" data-page="about">whoami</a>
-            <a href="#" data-page="resources">resources</a>
-            <a href="#" data-page="blurbs">blurbs</a>
+            <a href="?page=home">root</a>
+            <a href="?page=about">whoami</a>
+            <a href="?page=blurbs">blurbs</a>
         </nav>
 
         <main class="content" id="main-content">
@@ -276,75 +275,65 @@
     </div>
 
     <script>
-        // Initialize Feather Icons
-        document.addEventListener('DOMContentLoaded', () => {
-            feather.replace();
+        async function safeReadFile(path) {
+            const res = await fetch(path);
+            if (!res.ok) throw new Error(`HTTP ${res.status} – ${path}`);
+            return res.text();
+        }
+
+        function getPageFromURL() {
+        const params = new URLSearchParams(window.location.search);
+        return params.get('page') || 'home';        // default to home
+        }
+
+        function setPageInURL(page) {
+        const url = new URL(window.location);
+        url.searchParams.set('page', page);
+        history.pushState({page}, '', url);         // changes the bar, keeps SPA feel
+        }
+
+        async function loadMarkdownContent(pageName) {
+        const contentDiv = document.getElementById('main-content');
+        let md;
+
+        try {
+            if (pageName === 'blurbs') {
+
+            md = await safeReadFile('blurbs/index.md');
+            } else {
+            md = await safeReadFile(`content/${pageName}.md`);
+            }
+            contentDiv.innerHTML = marked.parse(md);
+
+            contentDiv.querySelectorAll('a[data-page]').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                const p = e.target.closest('a').dataset.page;
+                setPageInURL(p);
+                loadMarkdownContent(p);
+            });
+            });
+
+        } catch (err) {
+            console.error(err);
+        }
+        }
+
+        document.querySelectorAll('nav a[href^="?page="]').forEach(a => {
+        a.addEventListener('click', e => {
+            e.preventDefault();
+            const page = new URL(a.href).searchParams.get('page');
+            setPageInURL(page);
+            loadMarkdownContent(page);
+        });
         });
 
-        async function safeReadFile(filename) {
-            const contentDiv = document.getElementById('main-content');
-            try {
-                const response = await fetch(filename);
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return await response.text();
-            } catch (error) {
-                console.error('Full error details:', error);
-                contentDiv.innerHTML = `
-                    <div class="error-message">
-                        <h2>Error Loading Content</h2>
-                        <p>The requested content could not be loaded. Please try again later.</p>
-                        <p>Details: ${error.message}</p>
-                    </div>`;
-                throw new Error(`Failed to fetch ${filename}`);
-            }
-        }
+        window.addEventListener('popstate', () => {
+        loadMarkdownContent(getPageFromURL());
+        });
 
-        // Function to load and render markdown content
-        async function loadMarkdownContent(pageName) {
-            const contentDiv = document.getElementById('main-content');
-            
-            try {
-                let markdownContent;
-                
-                if (pageName === 'blurbs') {
-                    try {
-                        markdownContent = await safeReadFile('blurbs/index.md');
-                    } catch (error) {
-                        markdownContent = '# Blurbs\n\nBlurb content will be listed here.';
-                    }
-                } else {
-                    markdownContent = await safeReadFile(`content/${pageName}.md`);
-                }
-
-                contentDiv.innerHTML = marked.parse(markdownContent);
-                
-                // Add event listeners to any links with data-page attributes
-                contentDiv.querySelectorAll('a[data-page]').forEach(link => {
-                    link.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        const page = e.target.closest('a').dataset.page;
-                        loadMarkdownContent(page);
-                    });
-                });
-                
-            } catch (error) {
-                contentDiv.innerHTML = `
-                    <div class="error-message">
-                        <h2>Error Loading Content</h2>
-                        <p>The requested content could not be loaded. Please try again later.</p>
-                        <p>Details: ${error.message}</p>
-                    </div>`;
-            }
-        }
-
-        document.querySelectorAll('nav a[data-page]').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const page = e.target.closest('a').dataset.page;
-                loadMarkdownContent(page);
-            });
+        document.addEventListener('DOMContentLoaded', () => {
+        loadMarkdownContent(getPageFromURL());
         });
 
         function toggleTheme() {
@@ -355,10 +344,6 @@
                 body.setAttribute('data-theme', 'light');
             }
         }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            loadMarkdownContent('home');
-        });
     </script>
 </body>
 </html>

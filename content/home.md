@@ -1,22 +1,21 @@
 # hello, friend :)
 My name is sushi <3
 
-I don't quite know what you'd call me. R&D engineer or something.
+I'm a systems tinkerer, love all things autonomous systems theory and systems programming. I mainly work in Rust, Python, and C/C++ and am trying to learn Lean4 right now. 
 
-In my free time, I research emergence and stability in complex systems.
+I've worked in autonomous systems R&D for 3 years, lately using RL + LLMs in automated evasion agents, multi-objective pathfinders, and companion agents.
 
-I do systems programming in Rust and C/C++. I particularly enjoy working on high performance systems, simulators, and ML-based adaptive systems.
-
-I believe in radical open source, open access to knowledge and technology, and symbiotic collaboration. I strongly oppose the plutocracy, and see a unique power in federated research collectives who boast these values, in keeping techocapital power structures in check. I see knowledge enclosure as a form of parasitism on public intellectual labor.
+I believe in free and open source software as a means of resisting digital oppression, data privacy as a default digital right, and access to secure self-hosted tech as a necessity to maintain digital sovereignty.
 
 ---
 
-### OSS
+### FOSS
 
 Some open source stuff I've contributed to includes:
 
-- [kala](https://github.com/FiberedSkies/kala): Extremely fast agent-based simulator framework, built in Rust. (WIP)
-- [koho](https://github.com/FiberedSkies/koho): Spectral analysis of cellular sheaves of arbitrary types, built in Rust (WIP)
+- [kala](https://github.com/Harness-Labs/kala): Extremely fast agent-based simulator framework, built in Rust. (WIP)
+- [koho](https://github.com/Harness-Labs/koho): Spectral analysis of cellular sheaves of arbitrary types, built in Rust (WIP)
+- [topoi](https://github.com/Harness-Labs/topoi): Computational topos library, built in Rust (WIP)
 - [arbiter](https://github.com/anthias-labs/arbiter): Agent-based Ethereum sandbox, built in Rust.
 
 ---
@@ -29,11 +28,11 @@ Probably the best engineer I've ever met, has inspired and taught me so much. If
 
 #### [Colin](https://autoparallel.xyz/)
 
-I started as his boss and now I feel like he's my mentor. He's a mathematician by training and what I'd call a full-stack researcher, capable of everything from embedded systems programming and HPC to plasma physics research. Is single-handedly responsible for getting our entire circle into sheaves, and has taught us all so much.
+He's secretly my mentor but doesn't know it. He's a mathematician by training but capable of everything from embedded systems programming and HPC to plasma physics research. Is single-handedly responsible for getting all of Harness into sheaves, and has taught us all so much.
 
 #### [Jepsen](https://github.com/0xJepsen/)
 
-Jepsen is the applied math and cryptography wizard responsible for getting Colin and I into Rust, and ultimately respecting the computational side of math much more. He's one of the most passionate, authentic, and kind hearted people you'll ever meet; and always inspires you to be the best engineer you can be, whether he intends it or not.
+Jepsen is the applied mathematician and cryptographer who got Colin and I into Rust, and ultimately respecting the computational side of math much more. He's one of the most passionate, authentic, and kind hearted people you'll ever meet; and always inspires you to be the best engineer you can be, whether he intends it or not.
 
 #### [Ada](https://x.com/adalovescoffeee/)
 
@@ -41,7 +40,7 @@ An algebraic number theorist with an eye for the applied side. Is working on som
 
 #### [Sam](https://samlaki.neocities.org/)
 
-Your local digital McGyver. If you have a ridiculous idea you want to build, whether its software, hardware, or an actual device, he can probably give exactly the right advice or nudge that you need to make it real. Probably one of the few people capable of the entire research-to-reality pipeline.
+Logician, Mathematician, Engineer and probably like five other things. If you have a ridiculous idea you want to build, whether its software, hardware, or an actual device, he can probably give exactly the right advice or nudge that you need to make it real.
 
 #### [Bug](https://x.com/skitterspatial/)
 
