@@ -241,6 +241,30 @@
             padding: 1.5rem;
             border: 2px solid #ff0000;
         }
+
+        .blurb-box {
+            border: 2px solid var(--border-color);
+            margin: 1rem 0;
+            padding: 0.5rem;
+            background-color: #000000cc;
+            transition: all 0.3s ease;
+        }
+
+        .blurb-title {
+            font-weight: bold;
+            cursor: pointer;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .blurb-title:hover {
+            color: var(--link-color);
+        }
+
+        .blurb-content {
+            margin-top: 0.5rem;
+            padding-left: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -298,10 +322,33 @@
 
         try {
             if (pageName === 'blurbs') {
+                const indexMD = await safeReadFile('blurbs/index.md');
+                const blurbFiles = []; // optionally dynamically generate this list
+                
+                let combinedHTML = `<div class="blurb-header">${marked.parse(indexMD)}</div>`;
 
-            md = await safeReadFile('blurbs/index.md');
+                for (const file of blurbFiles) {
+                    const md = await safeReadFile(`blurbs/${file}`);
+                    const html = marked.parse(md);
+                    const title = /<h1[^>]*>(.*?)<\/h1>/i.exec(html)?.[1] || file;
+                    const slug = file.replace(/\.md$/, '');
+
+                    combinedHTML += `
+                        <div class="blurb-box">
+                            <div class="blurb-title" onclick="toggleBlurb('${slug}')">
+                                <a href="#${slug}" id="${slug}">${title}</a>
+                            </div>
+                            <div class="blurb-content" id="content-${slug}" style="display: none;">
+                                ${html}
+                            </div>
+                        </div>
+                    `;
+                }
+
+                contentDiv.innerHTML = combinedHTML;
             } else {
-            md = await safeReadFile(`content/${pageName}.md`);
+                md = await safeReadFile(`content/${pageName}.md`);
+                contentDiv.innerHTML = marked.parse(md);
             }
             contentDiv.innerHTML = marked.parse(md);
 
@@ -345,5 +392,12 @@
             }
         }
     </script>
+    <script>
+        feather.replace();
+        function toggleBlurb(id) {
+            const el = document.getElementById(`content-${id}`);
+            el.style.display = el.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>    
 </body>
 </html>

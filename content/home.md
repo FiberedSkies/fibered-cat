@@ -11,7 +11,7 @@ I believe in free and open source software as a means of resisting digital oppre
 
 ### FOSS
 
-Some open source stuff I've contributed to includes:
+I'm a member of [Harness Labs](https://github.com/Harness-Labs/), a FOSS research collective, where I work on math, ml libraries, and simulation infrastructure (agent-based, discrete event) in my free time. Some of the more interesting libraries I've made are the following:
 
 - [kala](https://github.com/Harness-Labs/kala): Extremely fast agent-based simulator framework, built in Rust. (WIP)
 - [koho](https://github.com/Harness-Labs/koho): Spectral analysis of cellular sheaves of arbitrary types, built in Rust (WIP)
@@ -40,8 +40,8 @@ An algebraic number theorist with an eye for the applied side. Is working on som
 
 #### [Sam](https://samlaki.neocities.org/)
 
-Logician, Mathematician, Engineer and probably like five other things. If you have a ridiculous idea you want to build, whether its software, hardware, or an actual device, he can probably give exactly the right advice or nudge that you need to make it real.
+Logician, Mathematician, Engineer and probably like five other things. If you have a ridiculous idea you want to build, whether its software, hardware, or an extremely specific device, he can probably give exactly the right advice or nudge that you need to make it real.
 
-#### [Bug](https://x.com/skitterspatial/)
+#### [Saturday/Bug](https://x.com/skitterspatial/)
 
-An algebraic geometer with an eye for the applied. My co-captain, and I'd like to think mentor, in our explorations of systems theory through sheaves and stacks. One of the most fun and playful people I've had the pleasure of working with, with an intuition that borders on x-ray vision. 
+An algebraic geometer with an eye for the applied. My co-captain, and I'd like to think mentor, in our explorations of systems theory through sheaves and stacks. One of the most fun and playful people I've had the pleasure of working with! 
