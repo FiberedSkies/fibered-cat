@@ -5,7 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🍣🍱</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+    <script>
+        marked.setOptions({
+            highlight: function(code, lang) {
+                if (hljs.getLanguage(lang)) {
+                    return hljs.highlight(code, { language: lang }).value;
+                }
+                return code; // fallback for unknown langs
+            }
+        });
+    </script>
+        
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.1/feather.min.js"></script>
+    <!-- KaTeX for Math Rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {
+            delimiters: [
+                { left: '$$', right: '$$', display: true },
+                { left: '$', right: '$', display: false }
+            ]
+        });"></script>
+
+    <!-- Highlight.js for Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/rust.min.js"></script>
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
@@ -265,6 +292,43 @@
             margin-top: 0.5rem;
             padding-left: 1rem;
         }
+        /* Keep regular MD styles untouched */
+
+        /* Add these for .blurb-content specific markdown elements */
+        .blurb-content h1, 
+        .blurb-content h2, 
+        .blurb-content h3, 
+        .blurb-content h4, 
+        .blurb-content h5, 
+        .blurb-content h6 {
+            color: var(--link-color); /* Differentiate headings inside blurbs */
+        }
+
+        .blurb-content p,
+        .blurb-content li {
+            color: var(--text-color); /* Inherit the normal text color */
+        }
+
+        .blurb-content a {
+            color: var(--link-color);
+        }
+
+        .blurb-content pre, 
+        .blurb-content code {
+            background-color: #111;  /* Keep that terminal feel */
+            color: #00ee00;          /* Neon green code blocks in blurbs */
+            border: 1px solid var(--border-color);
+            padding: 0.5rem;
+            display: block;
+            overflow-x: auto;
+        }
+
+        .blurb-content code:not(pre code) {
+            display: inline;         /* Inline code stays inline */
+            padding: 0.2rem 0.4rem;
+            background-color: #111;
+            color: #00ee00;
+        }
     </style>
 </head>
 <body>
@@ -323,7 +387,7 @@
         try {
             if (pageName === 'blurbs') {
                 const indexMD = await safeReadFile('blurbs/index.md');
-                const blurbFiles = []; // optionally dynamically generate this list
+                const blurbFiles = ['htw.md']; // optionally dynamically generate this list
                 
                 let combinedHTML = `<div class="blurb-header">${marked.parse(indexMD)}</div>`;
 

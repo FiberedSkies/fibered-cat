@@ -11,12 +11,11 @@ I believe in free and open source software as a means of resisting digital oppre
 
 ### FOSS
 
-I'm a member of [Harness Labs](https://github.com/Harness-Labs/), a FOSS research collective, where I work on math, ml libraries, and simulation infrastructure (agent-based, discrete event) in my free time. Some of the more interesting libraries I've made are the following:
+I'm a member of [Mesocarp](https://github.com/TheMesocarp/), a FOSS cybernetics research collective, where I work on math, ml libraries, and simulation infrastructure (agent-based, discrete event) in my free time. Some of the more interesting libraries I've made are the following:
 
-- [kala](https://github.com/Harness-Labs/kala): Extremely fast agent-based simulator framework, built in Rust. (WIP)
-- [koho](https://github.com/Harness-Labs/koho): Spectral analysis of cellular sheaves of arbitrary types, built in Rust (WIP)
-- [topoi](https://github.com/Harness-Labs/topoi): Computational topos library, built in Rust (WIP)
-- [arbiter](https://github.com/anthias-labs/arbiter): Agent-based Ethereum sandbox, built in Rust.
+- [kala](https://github.com/TheMesocarp/aika): Extremely fast agent-based simulator framework (WIP)
+- [koho](https://github.com/TheMesocarp/koho): Sheaf diffusion over a `candle-core` backend. (WIP)
+- [categories](https://github.com/TheMesocarp/categories): Computational category theory library. (WIP)
 
 ---
 
@@ -26,22 +25,22 @@ I'm a member of [Harness Labs](https://github.com/Harness-Labs/), a FOSS researc
 
 Probably the best engineer I've ever met, has inspired and taught me so much. If you have a high performance system that's already doing great, chances are they still know how to optimize it further. Best person to just talk to for hours about everything from systems design to social dynamics and emergence. 
 
-#### [Colin](https://autoparallel.xyz/)
-
-He's secretly my mentor but doesn't know it. He's a mathematician by training but capable of everything from embedded systems programming and HPC to plasma physics research. Is single-handedly responsible for getting all of Harness into sheaves, and has taught us all so much.
-
-#### [Jepsen](https://github.com/0xJepsen/)
-
-Jepsen is the applied mathematician and cryptographer who got Colin and I into Rust, and ultimately respecting the computational side of math much more. He's one of the most passionate, authentic, and kind hearted people you'll ever meet; and always inspires you to be the best engineer you can be, whether he intends it or not.
-
 #### [Ada](https://x.com/adalovescoffeee/)
 
 An algebraic number theorist with an eye for the applied side. Is working on some of the coolest computational math projects in Julia. Huge sweetheart who doesn't seem to realize the power he yields. My fav person to just talk about music, math, and life with.
+
+#### [Saturday](https://x.com/skitterspatial/)
+
+An algebraic geometer with an eye for the applied. My co-captain, and I'd like to think mentor, in our explorations of systems theory through sheaves and stacks. One of the most fun and playful people I've had the pleasure of working with! 
 
 #### [Sam](https://samlaki.neocities.org/)
 
 Logician, Mathematician, Engineer and probably like five other things. If you have a ridiculous idea you want to build, whether its software, hardware, or an extremely specific device, he can probably give exactly the right advice or nudge that you need to make it real.
 
-#### [Saturday/Bug](https://x.com/skitterspatial/)
+#### [Colin](https://autoparallel.xyz/)
 
-An algebraic geometer with an eye for the applied. My co-captain, and I'd like to think mentor, in our explorations of systems theory through sheaves and stacks. One of the most fun and playful people I've had the pleasure of working with! 
+He's secretly my mentor but doesn't know it. He's a mathematician by training but capable of everything from embedded systems programming and HPC to plasma physics research. Is single-handedly responsible for me finding my niche in sheaf research.
+
+#### [Jepsen](https://github.com/0xJepsen/)
+
+Jepsen is the applied mathematician and cryptographer who got Colin and I into Rust, and ultimately respecting the computational side of math much more. He's one of the most passionate and authentic people you'll ever meet; and always inspires you to be the best engineer you can be, whether he intends it or not.
