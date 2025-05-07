@@ -387,7 +387,7 @@
         try {
             if (pageName === 'blurbs') {
                 const indexMD = await safeReadFile('blurbs/index.md');
-                const blurbFiles = ['htw.md']; // optionally dynamically generate this list
+                const blurbFiles = []; // optionally dynamically generate this list
                 
                 let combinedHTML = `<div class="blurb-header">${marked.parse(indexMD)}</div>`;
 
