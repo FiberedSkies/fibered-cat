@@ -37,10 +37,6 @@ An algebraic geometer with an eye for the applied. My co-captain, and I'd like t
 
 Logician, Mathematician, Engineer and probably like five other things. If you have a ridiculous idea you want to build, whether its software, hardware, or an extremely specific device, he can probably give exactly the right advice or nudge that you need to make it real.
 
-#### [Colin](https://autoparallel.xyz/)
-
-He's secretly my mentor but doesn't know it. He's a mathematician by training but capable of everything from embedded systems programming and HPC to plasma physics research. Is single-handedly responsible for me finding my niche in sheaf research.
-
 #### [Jepsen](https://github.com/0xJepsen/)
 
 Jepsen is the applied mathematician and cryptographer who got Colin and I into Rust, and ultimately respecting the computational side of math much more. He's one of the most passionate and authentic people you'll ever meet; and always inspires you to be the best engineer you can be, whether he intends it or not.
