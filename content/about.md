@@ -3,28 +3,33 @@ I ask myself this a lot.
 
 ## Personal Bio
 
-I'm an ex-competitive distance runner, though stopped after breaking my ankle a while back. I still love running now, just am not nearly as fast anymore. I crochet a lot, I like making tops and bucket hats. I also bake a ton of desserts (particularly cookies and pies), read a lot of novels, and love RnB. 
+I'm an ex-competitive distance runner, though stopped after breaking my ankle a while back. I still love running now, just am not nearly as fast anymore. I crochet a lot, I like making tops and bucket hats. I also bake a ton of desserts (trying my hand at pastries but failing miserably), read a lot of novels, and love RnB. 
 
-Lately have been reading Kurt Vonegut's books! Just finished Cat's Cradle, now reading Slaughterhouse 5.
+Lately have been reading Kurt Vonegut's books! Just finished Slaughterhouse 5, now reading Mother Night.
 
 ## Professional Info
 
-Academically, I studied applied math and physics at the University of Waterloo, got a BSc. I've been an autonomous systems R&D engineer for 3 years professionally, lately learning to use RL + LLMs in automated evasion agents, multi-objective pathfinders, and companion agents. My previous position was an ML research internship with AIKOCorp, exploring autonomous EDR evasion agents. Prior to this, I worked on autonomous portfolio replication research for roughly two years. 
+Work: staff protocol infrastructure engineer at [Whetstone Research](https://whetstone.cc/).
 
-I do short-term and/or project-based solo contracts from time to time, so feel free to reach out if you have anything for me!
+Prev: [AIKOCorp](https://aikocorp.ai/), Primitive
+Profile: some sort of hybrid between a systems theorist and a systems engineer.
+
+As a theorist, I used to study PDEs and nonlinear systems theory in university before moving into industry to work on autonomous systems R&D. Some point during the process, some coworkers introduced me to sheaf theory, which has ultimately led me down a rabbit hole with TDA, TDL, and applied algebraic geometry. Now my research interests focus primarily on studying critical phenomena in complex systems, mostly through the lens of topological and geometric deep learning. As a corollary, I'm quite interested in multiscale and/or hierarchical learning agents.
+
+As a engineer, I really enjoy working on runtime development, distributed systems, and performance engineering. This would include everything from distributed runtimes for parallel discrete event simulators to resource-constrained runtimes for real-time telemetry processing systems. I deeply enjoy thinking about distributed coordination problems and am basically always looking for better hybrid synchronization models for PDES.
 
 ## Tech Interests
 
-I have way too many to list but here's the list of stuff you'll see me ranting about:
+Way too many to list but here's the list of stuff you'll see me ranting about:
 
- - **Simulation Design**
+ - **Runtime Development**
+ - **Performance Engineering**
  - **Autonomous Systems & Agents**
- - **Unsupervised Learning**
- - **Evasion Developement**
- - **Applied Categories and Topoi**
+ - **Topological Deep Learning**
+ - **Cybernetic Systems**
 
 I have nothing up currently, but will be posting little insights about these topics I find worth sharing under **Blurbs**. I eventually also want to do long forms but we'll start somewhere I suppose.
 
 ## contact info
 
-If any of these topics interest you or you want to have a chat, send me an email at [sushi@fibered.cat](mailto:sushi@fibered.cat)! For aiko related inquiries, send me a dm on twitter!
+If any of these topics interest you or you want to have a chat, send me an email at [sushi@fibered.cat](mailto:sushi@fibered.cat)!
