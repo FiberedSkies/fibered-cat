@@ -12,6 +12,7 @@ Lately have been reading Kurt Vonegut's books! Just finished Slaughterhouse 5, n
 Work: staff protocol infrastructure engineer at [Whetstone Research](https://whetstone.cc/).
 
 Prev: [AIKOCorp](https://aikocorp.ai/), Primitive
+
 Profile: some sort of hybrid between a systems theorist and a systems engineer.
 
 As a theorist, I used to study PDEs and nonlinear systems theory in university before moving into industry to work on autonomous systems R&D. Some point during the process, some coworkers introduced me to sheaf theory, which has ultimately led me down a rabbit hole with TDA, TDL, and applied algebraic geometry. Now my research interests focus primarily on studying critical phenomena in complex systems, mostly through the lens of topological and geometric deep learning. As a corollary, I'm quite interested in multiscale and/or hierarchical learning agents.

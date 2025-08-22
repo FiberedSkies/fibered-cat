@@ -1,4 +1,4 @@
-hullo!!
+## hullo!!
 My name is sushi <3
 
 I'm a systems tinkerer, love all things autonomous systems theory and systems programming. I mainly work in Rust, Solidity, C/C++, and Python. 
